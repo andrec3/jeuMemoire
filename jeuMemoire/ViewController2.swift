@@ -27,11 +27,11 @@ class ViewController2: UIViewController {
     
     //-----------------------
     private func animationScaleUp(){
-        UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseIn, .allowUserInteraction],  animations: {self.btnDemarrer.transform = CGAffineTransform (scaleX: 1.3, y: 1.3)}) {(true) in self.animationScaleUp()}
+        UIView.animate(withDuration: 0.4, delay: 1, options: [.curveEaseIn, .allowUserInteraction],  animations: {self.btnDemarrer.transform = CGAffineTransform (scaleX: 1.3, y: 1.3)}) {(true) in self.animationScaleUp()}
     }
     
     private func animationScaleDown(){
-        UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseOut, .allowUserInteraction],  animations: {self.btnDemarrer.transform = CGAffineTransform (scaleX: 1, y: 1)}) {(true) in self.animationScaleDown()}
+        UIView.animate(withDuration: 0.4, delay: 1, options: [.curveEaseOut, .allowUserInteraction],  animations: {self.btnDemarrer.transform = CGAffineTransform (scaleX: 1, y: 1)}) {(true) in self.animationScaleDown()}
     }
     //-----------------------
 
