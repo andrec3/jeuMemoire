@@ -14,6 +14,8 @@ class ViewController2: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Appel des fonctions d'animation
         animationScaleUp()
         animationScaleDown()
 
@@ -25,7 +27,7 @@ class ViewController2: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //-----------------------
+    //----------------------- Fonctions d'animation du bouton démarrer
     private func animationScaleUp(){
         UIView.animate(withDuration: 0.4, delay: 1, options: [.curveEaseIn, .allowUserInteraction],  animations: {self.btnDemarrer.transform = CGAffineTransform (scaleX: 1.3, y: 1.3)}) {(true) in self.animationScaleUp()}
     }

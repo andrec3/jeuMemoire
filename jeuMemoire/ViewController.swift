@@ -178,7 +178,7 @@ class ViewController: UIViewController {
         }
 
         verification()
-
+        //--------------------- Il est vérifié toutes les cartes ont été tournées et l'affichage la médaille.
         if arrayChosenViews.count == 2{
             count = count + 1
             if count == 6 {
@@ -188,6 +188,7 @@ class ViewController: UIViewController {
                 animationScaleDown()
             }
         }
+        //--------------------
     }
 
     //--------------------
@@ -249,7 +250,7 @@ class ViewController: UIViewController {
     }
     //--------------------
     @IBAction func reset(_ sender: UIButton) {
-        //faire une bucle ici
+        //Boucle
         for card in cardsToReset {
             card.isHidden = false
         }
@@ -260,7 +261,7 @@ class ViewController: UIViewController {
         reflip()
         medaille.isHidden = true
     }
-    //--------------------
+    //-------------------- Animation de la médaille
     private func animationScaleUp(){
         UIView.animate(withDuration: 0.4, delay: 1, options: [.curveEaseIn, .allowUserInteraction],  animations: {self.medaille.transform = CGAffineTransform (scaleX: 1.3, y: 1.3)}) {(true) in self.animationScaleUp()}
     }
